@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Azkar Application</string>
+    <string name="spaah">أذكار الصباح</string>
+    <string name="masaa">أذكار المساء</string>
+    <string name="naoom">أذكار النوم</string>
+    <string name="basmallah">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ</string>
+</resources>
