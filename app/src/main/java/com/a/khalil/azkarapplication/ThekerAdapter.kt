@@ -28,7 +28,6 @@ class ThekerAdapter(val context: Context, val athkar: ArrayList<Theker>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var num2: Int = 0
         if (athkar[position].intro.isNotEmpty()) {
             holder.tvIntro.text = athkar[position].intro
         } else {
@@ -38,7 +37,28 @@ class ThekerAdapter(val context: Context, val athkar: ArrayList<Theker>) :
         holder.tvbtunClick.text = athkar[position].buttonNumber.toString()
 
         holder.tvReward.setText(athkar[position].reward)
-        num2 = Integer.parseInt(holder.tvbtunClick.text.toString())
+        val num2 = when (holder.tvTheker.text) {
+            ("سبحان الله وبحمده.") -> 100
+            ("لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيءٍ قدير.") -> {
+                if (holder.tvReward.text.equals("كتب الله له مائة حسنة، ومحا عنه مائة سيئة، وكانت له عدل رقبة.")) {
+                    100
+                } else {
+                    10
+                }
+            }
+            "قل هو الله أحد الله الصمد لم يولد ولم يولد ولم يكن له كفواً أحد." -> 3
+            "قل أعوذ برب الفلق من شر ما خلق ومن شر غاسق إذا وقب ومن شر النفاثات في العقد ومن شر حاسد إذا حسد." -> 3
+            "قل أعوذ برب الناس ملك الناس إله الناس  من شر الوسواس الخناس  الذي يوسوس في صدور الناس من الجنة والناس." -> 3
+            "بسم الله الذي لا يضر مع اسمه شيء في الأرض ولا في السماء وهو السميع العليم." -> 3
+            "رضيت بالله رباً وبالِإسلام ديناَ وبمحمد صلى الله عليه وسلم نبياً." -> 3
+            "اللهم إني أصبحت أشهدك وأشهد حملة عرشك، وملائكتك وجميع خلقك بأنك أنت الله لا إله إلا أنت وحدك لا شريك لك، وأن محمداً عبدك ورسولك." -> 4
+            "اللهم إني أمسيت أشهدك وأشهد حملة عرشك، وملائكتك وجميع خلقك بأنك أنت الله لا إله إلا أنت وحدك لا شريك لك، وأن محمداً عبدك ورسولك." -> 4
+            "اللهم عافني في بدني، اللهم عافني في سمعي، اللهم عافني فيِ بصري لا إله إلا أنت اللهم إني أعوذ بك من الكفر والفقر وأعوذ بك من عذاب القبر لا إله إلا أنت." -> 3
+            "أعوذ بكلمات الله التامات من شر ما خلق." -> 3
+            "اللهم قني عذابك يوم تبعث عبادك." -> 3
+            "سبحان الله (33 مرة)، والحمد لله (33 مرة)، والله أكبر (34 مرة)." -> 33
+            else -> 1
+        }
 
         holder.tvbtunClick.setOnClickListener {
             var num = Integer.parseInt(holder.tvbtunClick.text.toString())
@@ -48,10 +68,12 @@ class ThekerAdapter(val context: Context, val athkar: ArrayList<Theker>) :
                 num = 0
             }
             holder.tvbtunClick.text = num.toString()
+            athkar[position].buttonNumber--
         }
 
         holder.imgRe.setOnClickListener {
             holder.tvbtunClick.text = num2.toString()
+            athkar[position].buttonNumber = num2
         }
 
         holder.imgEvidence.setOnClickListener {
