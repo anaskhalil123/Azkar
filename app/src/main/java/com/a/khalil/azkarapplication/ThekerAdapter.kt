@@ -93,7 +93,6 @@ class ThekerAdapter(val context: Context, val athkar: ArrayList<Theker>) :
                 alertDialog.dismiss()
             }
         }
-
     }
 
     override fun getItemCount(): Int {
