@@ -33,17 +33,19 @@ class ThekerAdapter(val context: Context, val athkar: ArrayList<Theker>) :
         } else {
             holder.tvIntro.visibility = View.GONE
         }
+
         holder.tvTheker.text = athkar[position].text
         holder.tvbtunClick.text = athkar[position].buttonNumber.toString()
 
         holder.tvReward.setText(athkar[position].reward)
+
         val num2 = when (holder.tvTheker.text) {
             ("سبحان الله وبحمده.") -> 100
             ("لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيءٍ قدير.") -> {
                 if (holder.tvReward.text.equals("كتب الله له مائة حسنة، ومحا عنه مائة سيئة، وكانت له عدل رقبة.")) {
-                    100
-                } else {
                     10
+                } else {
+                    100
                 }
             }
             "قل هو الله أحد الله الصمد لم يولد ولم يولد ولم يكن له كفواً أحد." -> 3
@@ -60,20 +62,23 @@ class ThekerAdapter(val context: Context, val athkar: ArrayList<Theker>) :
             else -> 1
         }
 
+
         holder.tvbtunClick.setOnClickListener {
             var num = Integer.parseInt(holder.tvbtunClick.text.toString())
             if (num > 0) {
                 num--
+                athkar[position].buttonNumber--
             } else {
                 num = 0
             }
             holder.tvbtunClick.text = num.toString()
-            athkar[position].buttonNumber--
         }
 
         holder.imgRe.setOnClickListener {
-            holder.tvbtunClick.text = num2.toString()
-            athkar[position].buttonNumber = num2
+            if (num2 >= 0) {
+                athkar[position].buttonNumber = num2
+                holder.tvbtunClick.text = athkar[position].buttonNumber.toString()
+            }
         }
 
         holder.imgEvidence.setOnClickListener {

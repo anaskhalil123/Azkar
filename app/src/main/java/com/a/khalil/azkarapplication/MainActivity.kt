@@ -2,6 +2,7 @@ package com.a.khalil.azkarapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val btnEvening: Button by lazy { findViewById(R.id.btnEvening) }
     private val btnSleep: Button by lazy { findViewById(R.id.btnSleep) }
     var btnName: String? = null
+    private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

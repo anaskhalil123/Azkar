@@ -11,9 +11,11 @@
         android:theme="@style/Theme.AzkarApplication">
         <activity
             android:name=".AzkarActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
