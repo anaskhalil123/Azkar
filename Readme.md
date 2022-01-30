@@ -1,6 +1,6 @@
 # Azkar Application
 
-Sqlite uses for storage 5 sections of Islamic Azkar, with beautiful Design, there is a hadeth for each Theker.
+Sqlite used for stored 5 sections of Islamic Azkar, with beautiful Design, there is a hadeth for each Theker.
 
 
 
