@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="btnColor">#9DC02E</color>
     <color name="statusBarColor">#5A6E1C</color>
+    <color name="button_background">#9DC02E</color>
 </resources>

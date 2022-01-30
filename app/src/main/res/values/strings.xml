@@ -2,7 +2,9 @@
     <string name="app_name">Azkar Application</string>
     <string name="spaah">أذكار الصباح</string>
     <string name="masaa">أذكار المساء</string>
+    <string name="AfterPrayer">أذكار بعد الصلاة</string>
     <string name="naoom">أذكار النوم</string>
+    <string name="wakeup">أذكار الاستيقاظ</string>
     <string name="basmallah">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ</string>
     <string name="tasbehAndHamd">سبحان الله وبحمده.</string>
     <string name="saeedAstkvar">اللهم أنت ربي، لا إله إلا أنت، خلقتني وأنا عبدك، وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك عليَّ، وأبوء لك بذنبي، فاغفر لي فإنه لا يغفر الذنوب إلا أنت.</string>
@@ -12,4 +14,5 @@
     <string name="besmallahAlthe">بسم الله الذي لا يضر مع اسمه شيء في الأرض ولا في السماء وهو السميع العليم.</string>
     <string name="radeto">رضيت بالله رباً وبالِإسلام ديناَ وبمحمد صلى الله عليه وسلم نبياً.</string>
     <string name="alhomaAfeni">اللهم عافني في بدني، اللهم عافني في سمعي، اللهم عافني فيِ بصري لا إله إلا أنت اللهم إني أعوذ بك من الكفر والفقر وأعوذ بك من عذاب القبر لا إله إلا أنت.</string>
+    <string name="esteatha">أَعُوْذُ بِاللهِ مِنَ الشَّيْطَانِ الرّجِيْم</string>
 </resources>
